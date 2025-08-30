@@ -37,10 +37,10 @@ jobs:
       #     # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
       #     flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-      # 5. Run tests with pytest (placeholder for your tests)
+      # 5. Run tests with pytest
       - name: Test with pytest
         run: |
           pip install pytest
-          # In a real project, you would have a 'tests' directory with your test files
-          # For now, this will just check if pytest can be run
-          pytest
+          # The following command will run tests if they exist, but will not fail if no tests are found.
+          # For a real project, create a 'tests' directory with your test files.
+          pytest --co
